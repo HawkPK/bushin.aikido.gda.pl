@@ -151,17 +151,21 @@
 @media (max-width: 768px) {
   .header {
     padding: 0 16px;
-    height: 56px;
-    line-height: 56px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    top: 0;
   }
 
   .logo {
-    margin: 12px 0;
+    margin: 10px 0;
+    height: 30px;
   }
 
   .content-layout {
     padding: 16px;
-    margin-top: 56px;
+    padding-top: 66px; /* 50px header + 16px padding */
+    margin-top: 0;
   }
 
   .page-title {
@@ -186,13 +190,13 @@
 
 @media (max-width: 576px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 0;
+    height: 50px;
+    padding: 0 12px;
   }
 
   .logo {
-    margin: 16px auto;
+    margin: 10px 0;
+    font-size: 1.5em;
   }
 
   .header-menu {
@@ -200,7 +204,8 @@
   }
 
   .content-layout {
-    margin-top: 112px;
+    padding-top: 62px; /* 50px header + 12px padding */
+    margin-top: 0;
   }
 }
 
