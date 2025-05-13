@@ -50,6 +50,8 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
+  height: 64px;
+  background-color: #001529;
 }
 
 .logo {
@@ -95,9 +97,8 @@
   padding: 24px;
   min-height: 280px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 64px auto 0;
   background: #fff;
-  padding-top: 88px; /* 64px header height + 24px padding */
 }
 
 .page-title {
@@ -150,17 +151,17 @@
 @media (max-width: 768px) {
   .header {
     padding: 0 16px;
-    height: 64px;
-    line-height: 64px;
+    height: 56px;
+    line-height: 56px;
   }
 
   .logo {
-    margin: 16px 0;
+    margin: 12px 0;
   }
 
   .content-layout {
     padding: 16px;
-    margin-top: 64px;
+    margin-top: 56px;
   }
 
   .page-title {
@@ -200,32 +201,6 @@
 
   .content-layout {
     margin-top: 112px;
-  }
-}
-
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 0 16px;
-  }
-
-  .content-layout {
-    padding: 16px;
-    padding-top: 80px; /* Slightly smaller padding on mobile */
-    margin: 0;
-  }
-
-  .mobile-menu-button {
-    display: block;
-    margin-left: auto;
-  }
-
-  .desktop-menu {
-    display: none;
-  }
-
-  .logo {
-    margin: 16px 0;
   }
 }
 
