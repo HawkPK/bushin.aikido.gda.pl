@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c832adda.css",
-    "main.js": "/static/js/main.3b318bfe.js",
-    "static/js/453.0d8fb803.chunk.js": "/static/js/453.0d8fb803.chunk.js",
-    "index.html": "/index.html",
-    "main.c832adda.css.map": "/static/css/main.c832adda.css.map",
-    "main.3b318bfe.js.map": "/static/js/main.3b318bfe.js.map",
-    "453.0d8fb803.chunk.js.map": "/static/js/453.0d8fb803.chunk.js.map"
+    "main.css": "/bushin.aikido.gda.pl/static/css/main.c832adda.css",
+    "main.js": "/bushin.aikido.gda.pl/static/js/main.8210e228.js",
+    "static/js/453.0d8fb803.chunk.js": "/bushin.aikido.gda.pl/static/js/453.0d8fb803.chunk.js",
+    "index.html": "/bushin.aikido.gda.pl/index.html",
+    "main.c832adda.css.map": "/bushin.aikido.gda.pl/static/css/main.c832adda.css.map",
+    "main.8210e228.js.map": "/bushin.aikido.gda.pl/static/js/main.8210e228.js.map",
+    "453.0d8fb803.chunk.js.map": "/bushin.aikido.gda.pl/static/js/453.0d8fb803.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c832adda.css",
-    "static/js/main.3b318bfe.js"
+    "static/js/main.8210e228.js"
   ]
 }
