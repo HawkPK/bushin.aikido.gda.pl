@@ -11,7 +11,7 @@ const Map: React.FC = () => {
         scrolling="no"
         marginHeight={0}
         marginWidth={0}
-        src="https://www.openstreetmap.org/export/embed.html?bbox=18.5641%2C54.3541%2C18.5741%2C54.3591&amp;layer=mapnik&amp;marker=54.3566%2C18.5691"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=18.572685420513157%2C54.37788450207575%2C18.575195968151096%2C54.37889680631828&amp;layer=mapnik&amp;marker=54.3783906573173%2C18.573940694332123"
         style={{ border: 0 }}
       />
     </div>

@@ -78,12 +78,12 @@ const Home: React.FC = () => {
               <div>
                 <ClockCircleOutlined style={{ fontSize: '24px', color: '#1890ff' }} />
                 <Title level={4}>Godziny otwarcia</Title>
-                <Paragraph>Pon-Pt: 17:00 - 21:00<br />Sob: 10:00 - 14:00</Paragraph>
+                <Paragraph>Pon-Pt: 17:00 - 21:00 </Paragraph>
               </div>
               <div>
                 <PhoneOutlined style={{ fontSize: '24px', color: '#1890ff' }} />
                 <Title level={4}>Kontakt</Title>
-                <Paragraph>Tel: +48 123 456 789<br />Email: kontakt@bushindojo.pl</Paragraph>
+                <Paragraph>Tel: +48 518 580 292<br />Email: aikidonaniedzwiedniku@gmail.com</Paragraph>
               </div>
             </Space>
           </Card>
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
             <Link to="/schedule">Zobacz grafik</Link>
           </Card>
         </Col>
-        <Col xs={24} md={8}>
+        {/* <Col xs={24} md={8}>
           <Card className="feature-card" hoverable>
             <Title level={3}>Aktualności</Title>
             <Paragraph>
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
             </Paragraph>
             <Link to="/news">Czytaj więcej</Link>
           </Card>
-        </Col>
+        </Col> */}
       </Row>
     </div>
   );

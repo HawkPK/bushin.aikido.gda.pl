@@ -32,63 +32,13 @@ const Contact: React.FC = () => {
           <Map />
         </Card>
 
-        <Row gutter={[24, 24]}>
-          <Col xs={24} lg={12}>
+        <Row gutter={[24, 24]}>          <Col xs={24} lg={12}>
             <Card className="feature-card">
-              <Form<ContactFormData>
-                form={form}
-                layout="vertical"
-                onFinish={onFinish}
-                requiredMark={false}
-              >
-                <Form.Item
-                  name="name"
-                  label="Imię i Nazwisko"
-                  rules={[{ required: true, message: 'Proszę podać imię i nazwisko' }]}
-                >
-                  <Input size="large" />
-                </Form.Item>
-
-                <Form.Item
-                  name="email"
-                  label="Email"
-                  rules={[
-                    { required: true, message: 'Proszę podać adres email' },
-                    { type: 'email', message: 'Proszę podać poprawny adres email' }
-                  ]}
-                >
-                  <Input size="large" prefix={<MailOutlined />} />
-                </Form.Item>
-
-                <Form.Item
-                  name="phone"
-                  label="Telefon"
-                >
-                  <Input size="large" prefix={<PhoneOutlined />} />
-                </Form.Item>
-
-                <Form.Item
-                  name="subject"
-                  label="Temat"
-                  rules={[{ required: true, message: 'Proszę podać temat wiadomości' }]}
-                >
-                  <Input size="large" />
-                </Form.Item>
-
-                <Form.Item
-                  name="message"
-                  label="Wiadomość"
-                  rules={[{ required: true, message: 'Proszę wpisać treść wiadomości' }]}
-                >
-                  <TextArea rows={6} />
-                </Form.Item>
-
-                <Form.Item>
-                  <Button type="primary" htmlType="submit" size="large" block>
-                    Wyślij wiadomość
-                  </Button>
-                </Form.Item>
-              </Form>
+              <Title level={3}>Formularz kontaktowy</Title>
+              <Paragraph>
+                Formularz kontaktowy jest tymczasowo niedostępny. 
+                Prosimy o kontakt telefoniczny lub mailowy.
+              </Paragraph>
             </Card>
           </Col>
 
@@ -112,7 +62,7 @@ const Contact: React.FC = () => {
                 <PhoneOutlined className="contact-info-icon" />
                 <div>
                   <strong>Telefon:</strong>
-                  <Paragraph>+48 123 456 789</Paragraph>
+                  <Paragraph>+48 518 580 292</Paragraph>
                 </div>
               </div>
 
@@ -120,7 +70,7 @@ const Contact: React.FC = () => {
                 <MailOutlined className="contact-info-icon" />
                 <div>
                   <strong>Email:</strong>
-                  <Paragraph>kontakt@bushindojo.pl</Paragraph>
+                  <Paragraph>aikidonaniedzwiedniku@gmail.pl</Paragraph>
                 </div>
               </div>
 
@@ -128,7 +78,7 @@ const Contact: React.FC = () => {
                 <Title level={4}>Godziny otwarcia:</Title>
                 <Paragraph>
                   Poniedziałek - Piątek: 17:00 - 21:00<br />
-                  Sobota: 10:00 - 14:00<br />
+                  Sobota: Zamknięte<br />
                   Niedziela: Zamknięte
                 </Paragraph>
               </div>

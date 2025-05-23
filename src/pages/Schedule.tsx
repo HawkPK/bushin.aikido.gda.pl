@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Card, Table, Tag, Button, Space, Row, Col } from 'antd';
+import { Typography, Card, Table, Tag, Button, Space, Row, Col, Breakpoint } from 'antd';
 import { ClockCircleOutlined, TeamOutlined, TrophyOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
@@ -7,52 +7,50 @@ const { Title, Paragraph } = Typography;
 
 const scheduleData = [
   {
-    key: '1',
-    day: 'Poniedziałek',
-    time: '18:00 - 19:30',
-    level: 'Początkujący',
-    instructor: 'Sensei Kowalski',
-    type: ['podstawy', 'ukemi']
+    key: '1',    day: 'Wtorek',
+    time: '18:20',
+    level: 'Dzieci (7 lat i starsze)',
+    instructor: 'Piotr Pek',
+    type: ['podstawy', 'gry i zabawy']
   },
   {
     key: '2',
-    day: 'Poniedziałek',
-    time: '19:45 - 21:15',
-    level: 'Zaawansowani',
-    instructor: 'Sensei Kowalski',
-    type: ['techniki zaawansowane', 'broń']
+    day: 'Wtorek',
+    time: '19:20',
+    level: 'Dorośli',
+    instructor: 'Paweł Jastrząbek / Piotr Pek',
+    type: ['podstawy', 'ukemi', 'techniki']
   },
   {
     key: '3',
-    day: 'Środa',
-    time: '18:00 - 19:30',
-    level: 'Początkujący',
-    instructor: 'Sensei Nowak',
-    type: ['podstawy', 'techniki']
+    day: 'Czwartek',
+    time: '17:30',
+    level: 'Dzieci (3-6 lat)',
+    instructor: 'Paweł Jastrząbek',
+    type: ['gry i zabawy', 'koordynacja']
   },
   {
     key: '4',
-    day: 'Środa',
-    time: '19:45 - 21:15',
-    level: 'Zaawansowani',
-    instructor: 'Sensei Nowak',
-    type: ['techniki zaawansowane']
+    day: 'Czwartek',
+    time: '18:20',    level: 'Dzieci (7 lat i starsze)',
+    instructor: 'Paweł Jastrząbek',
+    type: ['podstawy', 'ukemi']
   },
   {
     key: '5',
-    day: 'Piątek',
-    time: '18:00 - 19:30',
-    level: 'Ogólny',
-    instructor: 'Sensei Kowalski',
-    type: ['mieszany', 'wszystkie poziomy']
+    day: 'Czwartek',
+    time: '19:20',
+    level: 'Dorośli/Młodzież Początkujący',
+    instructor: 'Paweł Jastrząbek',
+    type: ['podstawy', 'ukemi']
   },
   {
     key: '6',
-    day: 'Sobota',
-    time: '10:00 - 11:30',
-    level: 'Dzieci (7-12 lat)',
-    instructor: 'Sensei Nowak',
-    type: ['podstawy', 'gry i zabawy']
+    day: 'Czwartek',
+    time: '20:00',
+    level: 'Dorośli/Młodzież Zaawansowani',
+    instructor: 'Paweł Jastrząbek',
+    type: ['techniki zaawansowane', 'broń']
   }
 ];
 
@@ -72,8 +70,7 @@ const columns = [
         {text}
       </Space>
     )
-  },
-  {
+  },  {
     title: 'Poziom',
     dataIndex: 'level',
     key: 'level',
@@ -84,8 +81,9 @@ const columns = [
         text.includes('Dzieci') ? 'purple' : 'orange';
       return <Tag color={color}>{text}</Tag>;
     }
-  },
-  {
+  }
+  // Commented out Instruktor column
+  /*{
     title: 'Instruktor',
     dataIndex: 'instructor',
     key: 'instructor',
@@ -95,8 +93,9 @@ const columns = [
         {text}
       </Space>
     )
-  },
-  {
+  }*/
+  // Commented out Typ zajęć column
+  /*{
     title: 'Typ zajęć',
     dataIndex: 'type',
     key: 'type',
@@ -109,7 +108,7 @@ const columns = [
         ))}
       </>
     )
-  }
+  }*/
 ];
 
 const Schedule: React.FC = () => {
@@ -146,9 +145,7 @@ const Schedule: React.FC = () => {
               </Paragraph>
             </Card>
           </Col>
-        </Row>
-
-        <Card className="feature-card">
+        </Row>        <Card className="feature-card">
           <Table 
             dataSource={scheduleData} 
             columns={columns} 

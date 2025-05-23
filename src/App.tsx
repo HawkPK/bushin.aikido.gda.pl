@@ -44,11 +44,11 @@ const menuItems = [
     icon: <TeamOutlined />,
     label: <Link to="/first-class">Pierwsze zajęcia</Link>
   },
-  {
-    key: '5',
-    icon: <NotificationOutlined />,
-    label: <Link to="/news">Aktualności</Link>
-  },
+  // {
+  //   key: '5',
+  //   icon: <NotificationOutlined />,
+  //   label: <Link to="/news">Aktualności</Link>
+  // },
   {
     key: '6',
     icon: <ContactsOutlined />,
@@ -112,8 +112,8 @@ const App: React.FC = () => {
             <Title level={5} style={{ color: 'white', marginBottom: 24 }}>Bushin Dojo</Title>
             <p>Klub "Gawra", ul. Trawki 7</p>
             <p>Gdańsk (obok PKM Niedźwiednik)</p>
-            <p>Tel: +48 123 456 789</p>
-            <p>Email: kontakt@bushindojo.pl</p>
+            <p>Tel: +48 518 580 292</p>
+            <p>Email: aikidonaniedzwiedniku@gmail.com</p>
             <Button type="primary" ghost style={{ marginTop: 16 }}>
               <Link to="/contact">Skontaktuj się z nami</Link>
             </Button>
