@@ -54,16 +54,17 @@ const scheduleData = [
   }
 ];
 
-const columns = [
-  {
+const columns = [  {
     title: 'Dzień',
     dataIndex: 'day',
     key: 'day',
+    width: '25%',
   },
   {
     title: 'Godzina',
     dataIndex: 'time',
     key: 'time',
+    width: '25%',
     render: (text: string) => (
       <Space>
         <ClockCircleOutlined />
