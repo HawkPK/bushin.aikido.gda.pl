@@ -58,13 +58,13 @@ const columns = [  {
     title: 'Dzień',
     dataIndex: 'day',
     key: 'day',
-    width: '25%',
+    width: '35%',
   },
   {
     title: 'Godzina',
     dataIndex: 'time',
     key: 'time',
-    width: '25%',
+    width: '35%',
     render: (text: string) => (
       <Space>
         <ClockCircleOutlined />
