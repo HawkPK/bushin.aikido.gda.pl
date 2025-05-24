@@ -54,17 +54,16 @@ const scheduleData = [
   }
 ];
 
-const columns = [  {
-    title: 'Dzień',
+const columns = [  {    title: 'Dzień',
     dataIndex: 'day',
     key: 'day',
-    width: '35%',
+    width: '100px',
   },
   {
     title: 'Godzina',
     dataIndex: 'time',
     key: 'time',
-    width: '35%',
+    width: '100px',
     render: (text: string) => (
       <Space>
         <ClockCircleOutlined />
@@ -146,12 +145,16 @@ const Schedule: React.FC = () => {
               </Paragraph>
             </Card>
           </Col>
-        </Row>        <Card className="feature-card">
-          <Table 
+        </Row>        <Card className="feature-card">          <Table 
             dataSource={scheduleData} 
             columns={columns} 
             pagination={false}
             className="schedule-table"
+            scroll={{ x: true }}
+            style={{ 
+              overflowX: 'auto',
+              minWidth: '100%'
+            }}
           />
         </Card>
       </Typography>
