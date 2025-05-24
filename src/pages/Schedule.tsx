@@ -54,18 +54,22 @@ const scheduleData = [
   }
 ];
 
-const columns = [  {    title: 'Dzień',
+const columns = [  {
+    title: 'Dzień',
     dataIndex: 'day',
     key: 'day',
-    width: '100px',
+    width: '120px',
+    render: (text: string) => (
+      <div style={{ whiteSpace: 'nowrap' }}>{text}</div>
+    )
   },
   {
     title: 'Godzina',
     dataIndex: 'time',
     key: 'time',
-    width: '100px',
+    width: '120px',
     render: (text: string) => (
-      <Space>
+      <Space style={{ whiteSpace: 'nowrap' }}>
         <ClockCircleOutlined />
         {text}
       </Space>
