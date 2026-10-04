@@ -6,8 +6,12 @@ import { Link } from 'react-router-dom';
 const { Title, Paragraph } = Typography;
 
 const carouselStyle: React.CSSProperties = {
-  height: '400px',
-  lineHeight: '400px',
+  height: '280px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '0 24px',
   textAlign: 'center',
   background: '#364d79',
   color: '#fff',
@@ -23,21 +27,21 @@ const Home: React.FC = () => {
             <Title level={1} style={{ color: 'white', margin: 0 }}>
               Bushin Dojo
             </Title>
-            <Title level={3} style={{ color: 'white', marginTop: '8px' }}>
+            <Title level={3} style={{ color: 'white', margin: '8px 0 0' }}>
               Akademia Aikido Gdańsk
             </Title>
           </div>
         </div>
         <div>
           <div style={carouselStyle}>
-            <Title level={2} style={{ color: 'white' }}>
+            <Title level={2} style={{ color: 'white', margin: 0 }}>
               Treningi dla początkujących i zaawansowanych
             </Title>
           </div>
         </div>
         <div>
           <div style={carouselStyle}>
-            <Title level={2} style={{ color: 'white' }}>
+            <Title level={2} style={{ color: 'white', margin: 0 }}>
               Dołącz do nas już dziś!
             </Title>
           </div>
