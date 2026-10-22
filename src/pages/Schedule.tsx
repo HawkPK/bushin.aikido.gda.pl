@@ -17,7 +17,7 @@ const scheduleData = [
     key: '2',
     day: 'Wtorek',
     time: '19:20',
-    level: 'Dorośli',
+    level: 'Dorośli/Młodzież Początkujący',
     instructor: 'Paweł Jastrząbek / Piotr Pek',
     type: ['podstawy', 'ukemi', 'techniki']
   },
@@ -40,14 +40,6 @@ const scheduleData = [
     key: '5',
     day: 'Czwartek',
     time: '19:20',
-    level: 'Dorośli/Młodzież Początkujący',
-    instructor: 'Paweł Jastrząbek',
-    type: ['podstawy', 'ukemi']
-  },
-  {
-    key: '6',
-    day: 'Czwartek',
-    time: '20:00',
     level: 'Dorośli/Młodzież Zaawansowani',
     instructor: 'Paweł Jastrząbek',
     type: ['techniki zaawansowane', 'broń']

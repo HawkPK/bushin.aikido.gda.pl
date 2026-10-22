@@ -68,7 +68,7 @@ const App: React.FC = () => {
       <Layout className="layout">
         <Header className="header">
           <div className="logo">
-            合気道
+            合氣道
           </div>
           <div className="mobile-menu-button">
             <Button type="text" icon={<MenuOutlined />} onClick={toggleMobileMenu} />

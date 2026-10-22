@@ -63,8 +63,8 @@
   align-items: center;
   color: white;
   font-size: 1.8em;
-  font-weight: bold;
-  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-family: "Yuji Syuku", "Noto Serif JP", "Yu Mincho", serif;
 }
 
 .header-menu {
