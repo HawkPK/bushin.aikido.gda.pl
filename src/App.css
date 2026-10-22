@@ -175,8 +175,7 @@
 
   .mobile-menu-button {
     display: block;
-    float: right;
-    margin-top: 15px;
+    margin-left: auto;
   }
 
   .mobile-menu-button .ant-btn {

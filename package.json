@@ -26,6 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.51.1",
     "gh-pages": "^6.3.0"
   }
 }

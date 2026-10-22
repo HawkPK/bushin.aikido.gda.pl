@@ -19,6 +19,10 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run test:e2e`
+
+Runs end-to-end tests with Playwright in Chromium. The development server starts automatically at `http://127.0.0.1:3000` and is reused if it is already running. Install the browser once with `npx playwright install chromium`.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
