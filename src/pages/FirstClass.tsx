@@ -80,7 +80,7 @@ const FirstClass: React.FC = () => {
           style={{ marginTop: 24 }}
         >
           <Paragraph>
-            Pierwsze zajęcia są próbne i bezpłatne. Wystarczy przyjść 15 minut przed rozpoczęciem treningu.
+            Dwa pierwsze treningi są próbne i bezpłatne. Wystarczy przyjść 15 minut przed rozpoczęciem treningu.
             Nie musisz mieć żadnego specjalnego stroju - keikogi (strój do aikido) możesz zakupić później.
           </Paragraph>
           <Paragraph>

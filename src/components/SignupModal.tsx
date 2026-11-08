@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { Modal, Form, Input, InputNumber, Radio, Checkbox, Button, Result, Row, Col, Typography } from 'antd';
 import { Link } from 'react-router-dom';
+import { MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import { scheduleData } from '../pages/Schedule';
 import './SignupModal.css';
 
@@ -77,7 +78,55 @@ const SignupContext = createContext<() => void>(() => {});
 /** Returns a function that opens the "first training" signup popup. */
 export const useSignup = () => useContext(SignupContext);
 
-export const SignupProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+// The online signup form collects personal data, so it stays switched off until the club's GDPR
+// paperwork is ready. Meanwhile the signup buttons open a popup with the club phone and email.
+// Set to true to bring the form back (and restore its e2e tests from git history).
+const SIGNUP_FORM_ENABLED = false;
+
+const ContactInfoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [open, setOpen] = useState(false);
+  const openSignup = useCallback(() => setOpen(true), []);
+  const close = () => setOpen(false);
+
+  return (
+    <SignupContext.Provider value={openSignup}>
+      {children}
+      <Modal
+        open={open}
+        onCancel={close}
+        footer={null}
+        width={480}
+        className="signup-modal"
+        title="Dwa pierwsze treningi za darmo"
+      >
+        <Paragraph>W sprawie zapisów na zajęcia prosimy o kontakt:</Paragraph>
+        <div className="signup-contact">
+          <a href={`tel:${CLUB_PHONE.replace(/\s/g, '')}`}><PhoneOutlined /> {CLUB_PHONE}</a>
+          <a href={`mailto:${CLUB_EMAIL}`}><MailOutlined /> {CLUB_EMAIL}</a>
+        </div>
+        <Paragraph strong className="signup-contact-hours-title">Godziny zajęć</Paragraph>
+        <ul className="signup-contact-hours">
+          {groups.map((g) => (
+            <li key={g.level}>
+              <span>{g.level}</span>
+              <Text type="secondary">{describeDays(g)}</Text>
+            </li>
+          ))}
+        </ul>
+        <Paragraph>Dziękujemy!</Paragraph>
+        <div className="signup-actions">
+          <Button type="primary" onClick={close}>Zamknij</Button>
+        </div>
+      </Modal>
+    </SignupContext.Provider>
+  );
+};
+
+/** Wraps the app so any page can open the "first training" popup via useSignup(). */
+export const SignupProvider: React.FC<{ children: React.ReactNode }> = (props) =>
+  SIGNUP_FORM_ENABLED ? <SignupFormProvider {...props} /> : <ContactInfoProvider {...props} />;
+
+const SignupFormProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>('form');
   const [sending, setSending] = useState(false);
@@ -141,7 +190,7 @@ export const SignupProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         footer={null}
         width={560}
         className="signup-modal"
-        title={view === 'form' ? 'Zapisz się na darmowy pierwszy trening' : null}
+        title={view === 'form' ? 'Zapisz się na darmowe treningi' : null}
         destroyOnClose={false}
       >
         {view === 'form' && (
