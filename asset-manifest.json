@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.d842669e.css",
-    "main.js": "./static/js/main.69521d8e.js",
+    "main.css": "./static/css/main.748a543c.css",
+    "main.js": "./static/js/main.1dfc4cdc.js",
     "static/js/453.0d8fb803.chunk.js": "./static/js/453.0d8fb803.chunk.js",
+    "static/media/hero.jpg": "./static/media/hero.0c92b3a05e7087764737.jpg",
+    "static/media/gallery-rei.jpg": "./static/media/gallery-rei.02326105a2e56e8ad798.jpg",
+    "static/media/gallery-technique.jpg": "./static/media/gallery-technique.88d19c908e8a7737da58.jpg",
+    "static/media/gallery-diplomas.jpg": "./static/media/gallery-diplomas.cb321178e57d71b15622.jpg",
+    "static/media/gallery-seiza.jpg": "./static/media/gallery-seiza.17720ea103fe3496fb73.jpg",
+    "static/media/gallery-ukemi.jpg": "./static/media/gallery-ukemi.5ae80d1e8ab202254873.jpg",
+    "static/media/adults.jpg": "./static/media/adults.7ab1448ed3aba82c6d52.jpg",
+    "static/media/gallery-dojo.jpg": "./static/media/gallery-dojo.e5f94613e4f53c5295dc.jpg",
+    "static/media/kids-3-6.jpg": "./static/media/kids-3-6.3fb2c49f597d64e00af9.jpg",
+    "static/media/kamiza.jpg": "./static/media/kamiza.d8c2303a35f3ca2869ea.jpg",
+    "static/media/kids-7.jpg": "./static/media/kids-7.7afef1b28b205de10883.jpg",
     "index.html": "./index.html",
-    "main.d842669e.css.map": "./static/css/main.d842669e.css.map",
-    "main.69521d8e.js.map": "./static/js/main.69521d8e.js.map",
+    "main.748a543c.css.map": "./static/css/main.748a543c.css.map",
+    "main.1dfc4cdc.js.map": "./static/js/main.1dfc4cdc.js.map",
     "453.0d8fb803.chunk.js.map": "./static/js/453.0d8fb803.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d842669e.css",
-    "static/js/main.69521d8e.js"
+    "static/css/main.748a543c.css",
+    "static/js/main.1dfc4cdc.js"
   ]
 }
