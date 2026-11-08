@@ -3,6 +3,7 @@ import { Typography, Card, Row, Col, Button, Image } from 'antd';
 import { ArrowRightOutlined, EnvironmentOutlined, ClockCircleOutlined, PhoneOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { scheduleData } from './Schedule';
+import { useSignup } from '../components/SignupModal';
 import './Home.css';
 
 import heroImg from '../assets/home/hero.jpg';
@@ -93,6 +94,8 @@ const gallery = [
 ];
 
 const Home: React.FC = () => {
+  const openSignup = useSignup();
+
   return (
     <div className="fade-in home">
       <section className="home-hero" style={{ backgroundImage: `url(${heroImg})` }}>
@@ -105,7 +108,7 @@ const Home: React.FC = () => {
             nie potrzebujesz doświadczenia ani kimona, wystarczy wygodny dres.
           </Paragraph>
           <div className="home-hero-actions">
-            <Button type="primary" size="large" href="#/first-class">
+            <Button type="primary" size="large" onClick={openSignup}>
               Umów darmowy pierwszy trening
             </Button>
             <Button size="large" ghost href="#/schedule">

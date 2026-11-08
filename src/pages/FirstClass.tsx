@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Card, List, Row, Col, Timeline, Button } from 'antd';
 import { CheckCircleOutlined, ClockCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { useSignup } from '../components/SignupModal';
 
 const { Title, Paragraph } = Typography;
 
@@ -32,6 +33,8 @@ const timelineSteps = [
 ];
 
 const FirstClass: React.FC = () => {
+  const openSignup = useSignup();
+
   return (
     <div className="content-layout">
       <Typography>
@@ -84,7 +87,7 @@ const FirstClass: React.FC = () => {
             Na pierwszy trening przynieś ze sobą dobry humor i otwartość na nowe doświadczenia!
             Nasi instruktorzy zadbają o to, abyś czuł się komfortowo i bezpiecznie podczas pierwszych kroków w Aikido.
           </Paragraph>
-          <Button type="primary" size="large" style={{ marginTop: 16 }}>
+          <Button type="primary" size="large" style={{ marginTop: 16 }} onClick={openSignup}>
             Zapisz się na trening próbny
           </Button>
         </Card>

@@ -11,6 +11,7 @@ import {
   MenuOutlined
 } from '@ant-design/icons';
 import './App.css';
+import { SignupProvider } from './components/SignupModal';
 
 // Import page components
 import Home from './pages/Home';
@@ -65,6 +66,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <SignupProvider>
       <Layout className="layout">
         <Header className="header">
           <div className="logo">
@@ -123,6 +125,7 @@ const App: React.FC = () => {
           </div>
         </Footer>
       </Layout>
+      </SignupProvider>
     </Router>
   );
 };
