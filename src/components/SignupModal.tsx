@@ -8,7 +8,7 @@ const { Paragraph, Text } = Typography;
 
 // Public Web3Forms access key: it only allows sending to the club address, so it is safe in client code.
 // Created at https://web3forms.com for aikidonaniedzwiedniku@gmail.com.
-const WEB3FORMS_KEY = 'WSTAW-KLUCZ-WEB3FORMS';
+const WEB3FORMS_KEY = '097201cf-9f6c-4ae7-8a18-b9e208fe6b39';
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
 
 const CLUB_PHONE = '+48 518 580 292';
