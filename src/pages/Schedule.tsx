@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
-const scheduleData = [
+export const scheduleData = [
   {
     key: '1',    day: 'Wtorek',
     time: '18:20',
