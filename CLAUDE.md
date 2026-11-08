@@ -17,7 +17,8 @@ Static marketing site for the Bushin Dojo aikido club in Gdańsk, live at https:
 
 Hosting is GitHub Pages from the `gh-pages` branch of `HawkPK/bushin.aikido.gda.pl`. `npm run deploy` runs `predeploy` (`npm run build`) and then `gh-pages -d build`, which pushes `build/` to `gh-pages`. The custom domain comes from `public/CNAME` (`bushin.pl`), which must stay in `public/`.
 
-- Deploy publishes **whatever is in the current working tree**, not `main`. Deploy from an up-to-date `main` (or merge first), otherwise a later deploy from `main` will revert unmerged changes.
+- **Normal flow: merge a PR into `main`.** The `.github/workflows/deploy.yml` workflow builds and publishes `build/` to `gh-pages` automatically (also runnable by hand from the Actions tab).
+- Manual `npm run deploy` still works but publishes **whatever is in the current working tree**, not `main`. Deploy from an up-to-date `main` only, otherwise the next automatic deploy will overwrite it.
 - Pages caches for about 10 minutes. To verify a deploy, compare the `main.<hash>.js` name in `build/index.html` against `curl -s https://bushin.pl/ | grep -o 'main\.[a-f0-9]*\.js'`.
 
 ## Architecture
