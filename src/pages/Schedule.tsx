@@ -121,7 +121,7 @@ const Schedule: React.FC = () => {
                 <Title level={3}>Nowy w Aikido?</Title>
                 <Paragraph style={{ textAlign: 'center' }}>
                   Rozpocznij swoją przygodę z Aikido od zajęć dla początkujących.
-                  Pierwszy trening jest bezpłatny!
+                  Dwa pierwsze treningi są bezpłatne!
                 </Paragraph>
                 <Button type="primary">
                   <Link to="/first-class">Dowiedz się więcej</Link>

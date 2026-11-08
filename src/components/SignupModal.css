@@ -57,6 +57,41 @@
   gap: 8px;
 }
 
+.signup-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.signup-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  word-break: break-all;
+}
+
+.signup-contact-hours-title.ant-typography {
+  margin-bottom: 8px;
+}
+
+.signup-contact-hours {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.signup-contact-hours li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
 .signup-summary {
   margin-bottom: 16px;
   padding: 12px 16px;

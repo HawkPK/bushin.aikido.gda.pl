@@ -104,12 +104,12 @@ const Home: React.FC = () => {
           <Title level={1} className="home-hero-title">Bushin Dojo</Title>
           <Title level={2} className="home-hero-subtitle">Akademia Aikido Gdańsk</Title>
           <Paragraph className="home-hero-text">
-            Tradycyjne aikido dla dzieci, młodzieży i dorosłych. Pierwszy trening jest bezpłatny —
+            Tradycyjne aikido dla dzieci, młodzieży i dorosłych. Dwa pierwsze treningi są bezpłatne —
             nie potrzebujesz doświadczenia ani kimona, wystarczy wygodny dres.
           </Paragraph>
           <div className="home-hero-actions">
             <Button type="primary" size="large" onClick={openSignup}>
-              Umów darmowy pierwszy trening
+              Umów darmowy trening
             </Button>
             <Button size="large" ghost href="#/schedule">
               Zobacz grafik
