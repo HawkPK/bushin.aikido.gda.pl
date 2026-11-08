@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Card, Table, Tag, Button, Space, Row, Col, Breakpoint } from 'antd';
 import { ClockCircleOutlined, TeamOutlined, TrophyOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
@@ -108,6 +108,8 @@ const columns = [  {
 ];
 
 const Schedule: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="fade-in">
       <Typography>
@@ -123,8 +125,8 @@ const Schedule: React.FC = () => {
                   Rozpocznij swoją przygodę z Aikido od zajęć dla początkujących.
                   Dwa pierwsze treningi są bezpłatne!
                 </Paragraph>
-                <Button type="primary">
-                  <Link to="/first-class">Dowiedz się więcej</Link>
+                <Button type="primary" onClick={() => navigate('/first-class')}>
+                  Dowiedz się więcej
                 </Button>
               </Space>
             </Card>
