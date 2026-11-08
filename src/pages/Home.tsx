@@ -127,6 +127,10 @@ const Home: React.FC = () => {
               Pod okiem doświadczonych instruktorów rozwiniesz swoje umiejętności, poprawisz kondycję
               i poznasz fascynującą kulturę japońskich sztuk walki.
             </Paragraph>
+            <Paragraph className="home-lead">
+              <strong>Należymy do AAI-Polska</strong> — działającej od 1996 roku organizacji oficjalnie uznanej
+              przez Aikikai Foundation (Hombu Dojo w Tokio), światową centralę aikido.
+            </Paragraph>
             <div className="home-facts">
               <div><strong>{trainingDays.length}×</strong>treningi w tygodniu</div>
               <div><strong>3+</strong>lat — zajęcia od najmłodszych</div>
