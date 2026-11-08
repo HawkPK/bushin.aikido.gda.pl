@@ -26,6 +26,19 @@ test('"Nowy w Aikido?" button on the schedule page has a readable label', async 
   await expect(page.getByRole('heading', { name: 'Pierwsze zajęcia' })).toBeVisible();
 });
 
+test('schedule lists instructors and who teaches each class', async ({ page }) => {
+  await page.goto('/#/schedule');
+
+  await expect(page.getByRole('heading', { name: 'Instruktorzy' })).toBeVisible();
+  await expect(page.getByText('4 DAN Aikido · 1 DAN Judo')).toBeVisible();
+  await expect(page.getByText('Piotr Pék', { exact: true })).toBeVisible();
+
+  const tuesdayAdults = page.getByRole('row', { name: /Wtorek.*19:15.*Początkujący/ });
+  await expect(tuesdayAdults).toContainText('Piotr Pék / Paweł Jastrząbek');
+  await expect(page.getByRole('row', { name: /Czwartek.*19:15.*Zaawansowani/ })).toBeVisible();
+  await expect(page.getByText('19:20')).toHaveCount(0);
+});
+
 test('navigates to the contact page from the footer', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: 'Skontaktuj się z nami' }).click();

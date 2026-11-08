@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Card, Table, Tag, Button, Space, Row, Col, Breakpoint } from 'antd';
 import { ClockCircleOutlined, TeamOutlined, TrophyOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
+import './Schedule.css';
 
 const { Title, Paragraph } = Typography;
 
@@ -10,15 +11,15 @@ export const scheduleData = [
     key: '1',    day: 'Wtorek',
     time: '18:20',
     level: 'Dzieci (7 lat i starsze)',
-    instructor: 'Piotr Pek',
+    instructor: 'Piotr Pék / Paweł Jastrząbek',
     type: ['podstawy', 'gry i zabawy']
   },
   {
     key: '2',
     day: 'Wtorek',
-    time: '19:20',
+    time: '19:15',
     level: 'Dorośli/Młodzież Początkujący',
-    instructor: 'Paweł Jastrząbek / Piotr Pek',
+    instructor: 'Piotr Pék / Paweł Jastrząbek',
     type: ['podstawy', 'ukemi', 'techniki']
   },
   {
@@ -39,11 +40,16 @@ export const scheduleData = [
   {
     key: '5',
     day: 'Czwartek',
-    time: '19:20',
+    time: '19:15',
     level: 'Dorośli/Młodzież Zaawansowani',
     instructor: 'Paweł Jastrząbek',
     type: ['techniki zaawansowane', 'broń']
   }
+];
+
+const instructors = [
+  { name: 'Paweł Jastrząbek', ranks: '4 DAN Aikido · 1 DAN Judo' },
+  { name: 'Piotr Pék', ranks: '1 DAN Aikido' },
 ];
 
 const columns = [  {
@@ -77,19 +83,18 @@ const columns = [  {
         text.includes('Dzieci') ? 'purple' : 'orange';
       return <Tag color={color}>{text}</Tag>;
     }
-  }
-  // Commented out Instruktor column
-  /*{
-    title: 'Instruktor',
+  },
+  {
+    title: 'Prowadzący',
     dataIndex: 'instructor',
     key: 'instructor',
     render: (text: string) => (
-      <Space>
+      <Space style={{ whiteSpace: 'nowrap' }}>
         <TeamOutlined />
         {text}
       </Space>
     )
-  }*/
+  }
   // Commented out Typ zajęć column
   /*{
     title: 'Typ zajęć',
@@ -143,7 +148,21 @@ const Schedule: React.FC = () => {
               </Paragraph>
             </Card>
           </Col>
-        </Row>        <Card className="feature-card">          <Table 
+        </Row>
+
+        <Card className="feature-card">
+          <Title level={3}>Instruktorzy</Title>
+          <div className="schedule-instructors">
+            {instructors.map((person) => (
+              <div key={person.name} className="schedule-instructor">
+                <Typography.Text strong>{person.name}</Typography.Text>
+                <Typography.Text type="secondary">{person.ranks}</Typography.Text>
+              </div>
+            ))}
+          </div>
+        </Card>
+
+        <Card className="feature-card">          <Table
             dataSource={scheduleData} 
             columns={columns} 
             pagination={false}
